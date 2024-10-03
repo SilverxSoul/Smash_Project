@@ -5,7 +5,9 @@ using UnityEngine;
 public class ZeroController : MonoBehaviour
 {
     Animator animator;
+    AudioSource audiosource;
     private int ComboIndex;
+    [SerializeField] private AudioClip[] soundAttack;
     public enum State
     {
         Idle,
@@ -21,6 +23,7 @@ public class ZeroController : MonoBehaviour
         animator=GetComponent<Animator>();
         ComboIndex = 1;
         attackAble = true;
+        audiosource=GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -39,6 +42,8 @@ public class ZeroController : MonoBehaviour
         {
             animator.SetTrigger("Attack" + ComboIndex);
             attackAble = false;
+            audiosource.clip = soundAttack[ComboIndex-1];
+            audiosource.Play();
             Debug.Log(ComboIndex);
         }
         
