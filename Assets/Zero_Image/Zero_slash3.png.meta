@@ -1,0 +1,444 @@
+fileFormatVersion: 2
+guid: 91e013aa81f5baa4ea9cec771b903850
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Zero_slash3_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 9
+        width: 46
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20859c25c9f7b24ba23cdf8a5b35d44
+      internalID: 1122282001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_slash3_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 8
+        width: 47
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de61f50631faa3f469cdf20666f153d1
+      internalID: -940617198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_slash3_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 8
+        width: 54
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8263d46cbc2d0044ea261ae649fbe317
+      internalID: 1307073057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_slash3_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 8
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.7708333, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d3167547275ca6469326b0fd7f4880c
+      internalID: -1200323460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_slash3_4
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 1
+        width: 103
+        height: 71
+      alignment: 9
+      pivot: {x: 0.78640777, y: 0.09859155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a81e099b8eac34694ca7f2338acb8d
+      internalID: 1514839552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_slash3_5
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 0
+        width: 104
+        height: 66
+      alignment: 9
+      pivot: {x: 0.78846157, y: 0.121212125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d706e277b448204a8c476bb314b0185
+      internalID: 320613038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_slash3_6
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 0
+        width: 104
+        height: 70
+      alignment: 9
+      pivot: {x: 0.78846157, y: 0.114285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9d2004ec1af6c45baf3bc3eda00d3f
+      internalID: -1545836575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_slash3_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 72
+        height: 67
+      alignment: 9
+      pivot: {x: 0.6944444, y: 0.11940298}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329c765e8eb463b45b226c8568954579
+      internalID: 865086808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_slash3_8
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 0
+        width: 58
+        height: 55
+      alignment: 9
+      pivot: {x: 0.62068963, y: 0.14545454}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e420a60ba5192f44a6b3dcdd37e2038
+      internalID: -1041919790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_slash3_9
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 4
+        width: 53
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5849057, y: 0.093023255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcfcd76d6f06979498078e32e74e760c
+      internalID: -77166234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_slash3_10
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 7
+        width: 51
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5686275, y: 0.025}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7842b3cecb2031e41871083c535bdc9e
+      internalID: -1015174329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_slash3_11
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 8
+        width: 51
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5686275, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a6b6fb972c4d9a4185111e1e24d3c56
+      internalID: 27817526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_slash3_12
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 8
+        width: 51
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5686275, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403b6cfba5b361e4c8a34dc9f96c77a9
+      internalID: -803724083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_slash3_13
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 8
+        width: 51
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb307a859ee3dc46b870a361181418a
+      internalID: 1440844409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_slash3_14
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 8
+        width: 41
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f1120e32093d84ab7e5b1774f9907b
+      internalID: -2108787625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Zero_slash3_0: 1122282001
+      Zero_slash3_1: -940617198
+      Zero_slash3_10: -1015174329
+      Zero_slash3_11: 27817526
+      Zero_slash3_12: -803724083
+      Zero_slash3_13: 1440844409
+      Zero_slash3_14: -2108787625
+      Zero_slash3_2: 1307073057
+      Zero_slash3_3: -1200323460
+      Zero_slash3_4: 1514839552
+      Zero_slash3_5: 320613038
+      Zero_slash3_6: -1545836575
+      Zero_slash3_7: 865086808
+      Zero_slash3_8: -1041919790
+      Zero_slash3_9: -77166234
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
