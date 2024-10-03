@@ -280,7 +280,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 346221141, guid: 0225114cebb383f4ab6ca9526d94b0ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.6875, y: 2.9375}
@@ -355,6 +355,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9f40baada5ccbdc4b96f44b777d9dda2, type: 3}
   - {fileID: 8300000, guid: 56be7cc2bace2e649993b5e4898f2c72, type: 3}
   - {fileID: 8300000, guid: 286df70d92d6c9747921ac140609e63c, type: 3}
+  speed: 5
   ZeroState: 0
 --- !u!82 &1158025315
 AudioSource:
