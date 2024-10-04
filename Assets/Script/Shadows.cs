@@ -32,11 +32,7 @@ public class Shadows : MonoBehaviour
                 return pool[i];
             } 
         }
-        GameObject obj = Instantiate(ShadownPrefab, transform.position, transform.rotation) as GameObject;
-        obj.GetComponent<SpriteRenderer>().sprite = GetComponent<SpriteRenderer>().sprite;
-        //obj.GetComponent<Solid>().color = color;
-        pool.Add(obj);
-        return obj;
+        return null;
     }
 
     public void ActiveShadowEffect()
