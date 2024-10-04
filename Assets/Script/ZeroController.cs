@@ -45,7 +45,7 @@ public class ZeroController : MonoBehaviour
         }
         Direction();
         Movement(direction);
-
+        Shadows.me.ActiveShadowEffect();
 
     }
 
