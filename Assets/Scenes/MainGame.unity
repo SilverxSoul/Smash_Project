@@ -358,6 +358,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 286df70d92d6c9747921ac140609e63c, type: 3}
   speed: 5
   ZeroState: 0
+  ActiveShadow: 0
+  maxDashTime: 0.25
 --- !u!82 &1158025315
 AudioSource:
   m_ObjectHideFlags: 0
@@ -461,7 +463,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158025307}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7c4a7019b908e645a1470d92250cb10, type: 3}
   m_Name: 
