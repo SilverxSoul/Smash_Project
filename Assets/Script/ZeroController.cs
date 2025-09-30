@@ -9,8 +9,10 @@ public class ZeroController : MonoBehaviour
     AudioSource audiosource;
     SpriteRenderer spriterender;
     private int ComboIndex;
+    public bool test;
     [SerializeField] private AudioClip[] soundAttack;
     [SerializeField] private float speed;
+    [SerializeField] private float jumpForce;
     Rigidbody2D rb;
     float horizontal;
     float vertical;
@@ -19,7 +21,9 @@ public class ZeroController : MonoBehaviour
     {
         Idle,
         Attacking,
-        Dashing
+        Dashing,
+        Jumping,
+        Falling
     }
 
     bool attackAble;
@@ -27,8 +31,11 @@ public class ZeroController : MonoBehaviour
     public bool ActiveShadow;
     //Thời gian dash hiện tại
     private float dashTime;
+    //Thời gian nhảy hiện tại
+    private float jumpTime;
     //thời gian tối đa của một lần dash
     [SerializeField]private float maxDashTime;
+    [SerializeField] private float maxJumpTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,17 +53,21 @@ public class ZeroController : MonoBehaviour
     void Update()
     {
 
+        
+    }
+    private void FixedUpdate()
+    {
         if (Input.GetKeyUp(KeyCode.Space))
         {
             Attack();
         }
-        if(ZeroState != State.Dashing)
+        if (ZeroState != State.Dashing )
         {
             Direction();
             Movement(direction);
         }
-        
-        if(ActiveShadow)
+
+        if (ActiveShadow)
         {
             Shadows.me.ActiveShadowEffect();
         }
@@ -67,7 +78,7 @@ public class ZeroController : MonoBehaviour
             dashTime = Time.time;
             Dash();
         }
-        if(ZeroState == State.Dashing && (Time.time - dashTime) >= maxDashTime && Input.GetKey(KeyCode.Z))// GetKey là ám chỉ bạn đang giữ nút đó, nếu tại frame đó bạn thực sự đang giữ key đó thì sẽ trả về true, còn các trường hợp còn lại thì là false.
+        if (ZeroState == State.Dashing && (Time.time - dashTime) >= maxDashTime && Input.GetKey(KeyCode.Z))// GetKey là ám chỉ bạn đang giữ nút đó, nếu tại frame đó bạn thực sự đang giữ key đó thì sẽ trả về true, còn các trường hợp còn lại thì là false.
         {
             dashTime = 0;
             StopDash();
@@ -78,6 +89,21 @@ public class ZeroController : MonoBehaviour
             dashTime = 0;
             StopDash();
             ZeroState = State.Idle;
+        }
+        if (Input.GetKeyDown(KeyCode.X) && ZeroState != State.Jumping)
+        {
+            jumpTime = Time.time;
+            Jump();
+        }
+        if (ZeroState == State.Jumping && (Time.time - jumpTime) <= maxJumpTime && Input.GetKey(KeyCode.X) )
+        {
+            Jump();
+        }
+        if (rb.velocity.y < 0 && ZeroState != State.Falling)
+        {
+            Debug.Log(rb.velocity.y);
+            jumpTime = 0;
+            Falling();
         }
     }
 
@@ -128,7 +154,7 @@ public class ZeroController : MonoBehaviour
                     break;
             }
 
-            if (direction != Vector2.zero)
+            if (direction != Vector2.zero && ZeroState==State.Idle)
             {
                 
                 animator.SetBool("IsWalking", true);
@@ -138,9 +164,9 @@ public class ZeroController : MonoBehaviour
                 animator.SetBool("IsWalking", false);
             }
 
-            rb.velocity = direction.normalized * speed;
+            rb.velocity = new Vector2(Math.Sign(direction.x) * speed, rb.velocity.y);// nếu không sửa cái này thì nó sẽ lúc fall sẽ bị chuẩn hóa thành 1 khiến việc fall luôn bị fall không còn tự nhiên theo thông thường!!!
         }
-        else rb.velocity = Vector2.zero;
+        else rb.velocity = new Vector2(0,rb.velocity.y);
 
     }
     void Direction()
@@ -164,7 +190,7 @@ public class ZeroController : MonoBehaviour
       
         else
         {
-            direction= Vector2.zero;
+            direction= new Vector2(0,rb.velocity.y);
         }
     }
     void Dash()
@@ -188,5 +214,32 @@ public class ZeroController : MonoBehaviour
         rb.velocity = Vector2.zero;
     }
 
+    void Jump()
+    {
+        ZeroState = State.Jumping;
+        rb.AddForce(Vector2.up* jumpForce,ForceMode2D.Impulse);
+        animator.SetTrigger("Jump");
+    }
+    void Falling()
+    {
+        ZeroState = State.Falling;
+        animator.ResetTrigger("Jump");//chủ động tắt trigger thay vì để unity tự động tắt, nếu thiếu cái này animation dễ bị hiện tượng là vẫn kích hoạt animation Jump!!
+        animator.SetTrigger("Fall");
+        
+    }
+
+    void Landing()
+    {
+        ZeroState = State.Idle;
+        animator.SetTrigger("Landing");
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground") && ZeroState == State.Falling)
+        {
+            Landing();
+        }
+    }
     
 }
