@@ -13,10 +13,13 @@ public class ZeroController : MonoBehaviour
     [SerializeField] private AudioClip[] soundAttack;
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private Vector2 boxSizeCheckGround;
+    [SerializeField] private float BoxCheckGroundDistance;
     Rigidbody2D rb;
     float horizontal;
     float vertical;
     Vector2 direction;
+    [SerializeField] private bool isGrounded;
     public enum State
     {
         Idle,
@@ -47,6 +50,7 @@ public class ZeroController : MonoBehaviour
         rb=GetComponent<Rigidbody2D>();
         ZeroState = State.Idle;
         dashTime = 0;
+        CheckGround();//gán giá trị isGrounded khi bắt đầu
     }
 
     // Update is called once per frame
@@ -90,18 +94,18 @@ public class ZeroController : MonoBehaviour
             StopDash();
             ZeroState = State.Idle;
         }
-        if (Input.GetKeyDown(KeyCode.X) && ZeroState != State.Jumping)
+        if (Input.GetKeyDown(KeyCode.X) && ZeroState != State.Jumping && isGrounded)
         {
             jumpTime = Time.time;
+            CheckGround();
             Jump();
         }
         if (ZeroState == State.Jumping && (Time.time - jumpTime) <= maxJumpTime && Input.GetKey(KeyCode.X) )
         {
             Jump();
         }
-        if (rb.velocity.y < 0 && ZeroState != State.Falling)
+        if (rb.velocity.y < 0 && ZeroState != State.Falling && !CheckGround())
         {
-            Debug.Log(rb.velocity.y);
             jumpTime = 0;
             Falling();
         }
@@ -233,10 +237,23 @@ public class ZeroController : MonoBehaviour
         ZeroState = State.Idle;
         animator.SetTrigger("Landing");
     }
+    bool CheckGround()
+    {
+        if (Physics2D.BoxCast(transform.position, boxSizeCheckGround, 0, Vector2.down, BoxCheckGroundDistance, LayerMask.GetMask("Ground")))
+            isGrounded = true;
+        else
+            isGrounded = false;
+        return isGrounded;
+
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube((Vector2)transform.position + Vector2.down * BoxCheckGroundDistance, boxSizeCheckGround);
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") && ZeroState == State.Falling)
+        if (CheckGround())
         {
             Landing();
         }

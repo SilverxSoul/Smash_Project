@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 299795062}
   - component: {fileID: 299795061}
   - component: {fileID: 299795060}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -617,6 +617,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ForceForDefault: 50000
   ForceForImpulse: 10
+  isGrounded: 0
+  boxSizeCheckGround: {x: 1.33, y: -0.09}
+  BoxCheckGroundDistance: 0.82
 --- !u!58 &363130146
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -757,9 +760,9 @@ GameObject:
   - component: {fileID: 695639374}
   - component: {fileID: 695639376}
   - component: {fileID: 695639375}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SquareBoxcollider
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1081,6 +1084,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 286df70d92d6c9747921ac140609e63c, type: 3}
   speed: 5
   jumpForce: 0.05
+  boxSizeCheckGround: {x: 1.69, y: 0.09}
+  BoxCheckGroundDistance: 0.03
+  isGrounded: 0
   ZeroState: 0
   ActiveShadow: 0
   maxDashTime: 0.25
@@ -1253,7 +1259,7 @@ GameObject:
   - component: {fileID: 1814792353}
   - component: {fileID: 1814792352}
   - component: {fileID: 1814792351}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1768,7 +1774,7 @@ GameObject:
   - component: {fileID: 2016067783}
   - component: {fileID: 2016067782}
   - component: {fileID: 2016067781}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundWithCompositeCollider2d
   m_TagString: Ground
   m_Icon: {fileID: 0}
